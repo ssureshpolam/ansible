@@ -1,6 +1,14 @@
+#redhat.yaml
 ---
 - name: Install epel
   yum: pkg=epel-release
 
 - name: Yum install Tomcat7 in REL system
 yum: pkg=java,tomcat update_cache=yes
+
+#debian.yaml
+---
+- name: Apt install Tomcat7 in Deb system
+  apt: name=default-jdk,tomcat7 update_cache=yes cache_valid_time=3600
+
+
